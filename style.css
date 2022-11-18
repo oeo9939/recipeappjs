@@ -158,3 +158,30 @@ header button{
     color: rebeccapurple;
 }
 
+/* Recipe info */
+
+.meal-info-container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.meal-info{
+    background-color: #fff;
+    padding: 0 2rem;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.meal-info h1{
+    text-align: center;
+}
+
+.meal-info
