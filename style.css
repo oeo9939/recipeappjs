@@ -184,4 +184,17 @@ header button{
     text-align: center;
 }
 
-.meal-info
+.meal-info .close-popup{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+}
+
+.meal-info-container.hidden{
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
