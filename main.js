@@ -123,6 +123,8 @@ function addMealFav(mealData) {
 }
 
 function showMealInfo(mealData) {
+    // clean it up
+    mealInfoEl.innerHTML = "";
     // update meal info
     const mealEl = document.createElement("div");
     mealInfoEl.appendChild(mealEl);
@@ -133,11 +135,6 @@ function showMealInfo(mealData) {
         <p>
         ${mealData.strInstructions}
         </p>
-        <ul>
-            <li>ing 1 / measure</li>
-            <li>ing 2 / measure</li>
-            <li>ing 3 / measure</li>
-        </ul>
     `;
     // show popup
     mealPopup.classList.remove("hidden");

@@ -114,6 +114,7 @@ header button{
     box-shadow: 0 0 10px 2px #3333331A;
     margin: 1.5rem;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .meal-header{
@@ -178,6 +179,9 @@ header button{
     border-radius: 5px;
     max-width: 600px;
     width: 100%;
+    position: relative;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 .meal-info h1{
@@ -197,3 +201,9 @@ header button{
     opacity: 0;
     pointer-events: none;
 }
+
+/* .meal-info img{
+    height: 350px;
+    width: 800px;
+    object-fit: contain;
+} */
