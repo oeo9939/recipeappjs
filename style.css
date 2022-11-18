@@ -160,7 +160,7 @@ header button{
 
 /* Recipe info */
 
-.meal-info-container{
+.popup-container {
     position: fixed;
     display: flex;
     align-items: center;
@@ -172,7 +172,7 @@ header button{
     bottom: 0;
 }
 
-.meal-info{
+.popup{
     background-color: #fff;
     padding: 0 2rem;
     border-radius: 5px;
@@ -184,7 +184,7 @@ header button{
     text-align: center;
 }
 
-.meal-info .close-popup{
+.popup .close-popup{
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -193,8 +193,7 @@ header button{
     font-size: 1.8rem;
 }
 
-.meal-info-container.hidden{
+.popup-container.hidden{
     opacity: 0;
-    user-select: none;
     pointer-events: none;
 }
