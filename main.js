@@ -114,7 +114,15 @@ function addMealFav(mealData) {
     favoriteContainer.appendChild(favMeal);
 }
 
-searchBtn.addEventListener("click", () => {
+searchBtn.addEventListener("click", async () => {
     const search = searchTerm.value;
-    console.log(getMealsBySearch(search));
+    // console.log(await getMealsBySearch(search));
+
+    const meals = await getMealsBySearch(search);
+
+        if (meals) {
+        meals.forEach((meal) => {
+            addMeal(meal);
+        });
+    }
 });
