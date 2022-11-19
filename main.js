@@ -119,6 +119,10 @@ function addMealFav(mealData) {
         
     });
 
+    favMeal.addEventListener("click", () => {
+        showMealInfo(mealData);
+    });
+
     favoriteContainer.appendChild(favMeal);
 }
 

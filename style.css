@@ -67,6 +67,7 @@ header button{
 }
 
 .fav-meals li{
+    cursor: pointer;
     position: relative;
     margin: 5px;
     width: 75px;
