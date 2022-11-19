@@ -104,7 +104,7 @@ async function fetchFavMeals() {
 
 function addMealFav(mealData) {
     const favMeal = document.createElement("li");
-    
+
     favMeal.innerHTML = `
     <button class="clear"><i class="fa-regular fa-circle-xmark"></i></button>
     <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}"/>
@@ -133,12 +133,27 @@ function showMealInfo(mealData) {
     const mealEl = document.createElement("div");
     mealInfoEl.appendChild(mealEl);
 
+    const ingredients = [];
+    // get ingredients
+    for(let i = 1; i < 20; i++) {
+        if(mealData['strIngredient' + i]) {
+            ingredients.push(`${mealData['strIngredient' + i]} - ${mealData['strMeasure' + i]}`)
+        } else {
+            break;
+        }
+    }
+
     mealEl.innerHTML = `
         <h1>${mealData.strMeal}</h1>
         <img src="${mealData.strMealThumb}" alt="${mealData.strMeal}" />
         <p>
         ${mealData.strInstructions}
         </p>
+        <h3>Ingredients:</h3>
+        <ul>
+        ${ingredients.map(ing => `<li>${ing}</li>`).join("")}
+        </ul>
+
     `;
     // show popup
     mealPopup.classList.remove("hidden");
